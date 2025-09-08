@@ -5,16 +5,22 @@
   const dropdownToggles = document.querySelectorAll('[data-dropdown-toggle]');
 
   if (navToggle && nav) {
+    navToggle.setAttribute('aria-expanded', 'false');
     navToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
+      const open = nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   }
 
   dropdownToggles.forEach(btn => {
+    btn.setAttribute('aria-expanded', 'false');
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const parent = btn.closest('.dropdown');
-      parent?.classList.toggle('open');
+      const nowOpen = !parent?.classList.contains('open');
+      document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+      if (nowOpen) parent?.classList.add('open');
+      btn.setAttribute('aria-expanded', nowOpen ? 'true' : 'false');
     });
   });
 
@@ -74,5 +80,48 @@
   document.querySelectorAll('[data-bar]')?.forEach(bar => {
     const value = parseFloat(bar.getAttribute('data-bar')) || 0;
     requestAnimationFrame(() => { bar.style.width = Math.min(value, 100) + '%'; });
+  });
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('[data-reveal], .card, .timeline-item');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(({isIntersecting, target}) => {
+        if (isIntersecting) target.classList.add('in-view');
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => {
+      el.classList.add('reveal');
+      obs.observe(el);
+    });
+  } else {
+    revealEls.forEach(el => el.classList.add('in-view'));
+  }
+
+  // Ripple on buttons
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple';
+      const size = Math.max(rect.width, rect.height);
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = (e.clientX - rect.left - size/2) + 'px';
+      ripple.style.top = (e.clientY - rect.top - size/2) + 'px';
+      btn.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  });
+
+  // Image fallback
+  const fallback = 'https://images.unsplash.com/photo-1584036561584-b03c19da874c?auto=format&fit=crop&w=1600&q=60';
+  document.querySelectorAll('img').forEach(img => {
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.addEventListener('error', () => {
+      if (img.dataset.fallbackApplied) return;
+      img.dataset.fallbackApplied = 'true';
+      img.src = fallback;
+    }, { once: true });
   });
 })();
