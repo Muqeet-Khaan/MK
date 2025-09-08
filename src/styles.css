@@ -1,0 +1,19 @@
+:root {
+  --bg: #0b1220;
+  --panel: #10192d;
+  --text: #e6ebf2;
+  --muted: #9aa7bd;
+  --accent: #3b82f6;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+.viewport-center { min-height: 100%; display: grid; place-items: center; padding: 24px; }
+.status-card { background: var(--panel); border: 1px solid rgba(255,255,255,.06); border-radius: 14px; padding: 28px 24px; width: 100%; max-width: 520px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.status-title { margin: 0 0 8px; font-size: 20px; }
+.status-text { margin: 0; color: var(--muted); }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
