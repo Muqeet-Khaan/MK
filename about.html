@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Vertex Systems</title>
+  <meta name="description" content="About Vertex Systems, an educational resource on biological viruses." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Vertex Systems home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Vertex Systems</span>
+      </a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle navigation">Menu</button>
+      <nav class="nav" data-nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="types.html">Types of Virus</a>
+        <a href="timeline.html">Year Wise Listing</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle" data-dropdown-toggle aria-haspopup="true" aria-expanded="false">Individual Viruses ▾</a>
+          <div class="dropdown-menu" role="menu">
+            <a href="covid-19.html" role="menuitem">COVID-19</a>
+            <a href="ebola.html" role="menuitem">Ebola</a>
+            <a href="hiv.html" role="menuitem">HIV</a>
+            <a href="influenza.html" role="menuitem">Influenza</a>
+            <a href="zika.html" role="menuitem">Zika</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>About Us</h1>
+      <p>Vertex Systems is a fictional health tech company dedicated to providing clear, accessible education about biological viruses and public health. We curate trusted information from reputable sources to help learners, researchers, and the public understand virology and disease prevention.</p>
+      <div class="grid">
+        <article class="card" style="grid-column: span 12;">
+          <div class="card-body">
+            <h2>Our Mission</h2>
+            <p>Empower communities with knowledge about viruses—how they spread, how to reduce risk, and how science responds. We advocate for evidence-based practices and support global health literacy.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <strong>Vertex Systems</strong>
+        <p>Educational resource on virology and public health.</p>
+      </div>
+      <div class="footer-col">
+        <nav aria-label="Footer">
+          <a href="about.html">About Us</a><br />
+          <a href="types.html">Types of Virus</a><br />
+          <a href="timeline.html">Year Wise Listing</a><br />
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <form class="form" data-feedback-form aria-label="Feedback form">
+          <div>
+            <label for="f-name">Name</label>
+            <input class="input" id="f-name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div>
+            <label for="f-email">Email</label>
+            <input class="input" id="f-email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div>
+            <label for="f-message">Message</label>
+            <textarea class="textarea" id="f-message" name="message" placeholder="Your feedback" required></textarea>
+          </div>
+          <button class="btn" type="submit">Send Feedback</button>
+        </form>
+      </div>
+      <div class="footer-col" style="grid-column: span 12;">
+        <small>© <span id="year"></span> Vertex Systems. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="./script.js" defer></script>
+</body>
+</html>

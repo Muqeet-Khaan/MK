@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biological Viruses | Vertex Systems</title>
+  <meta name="description" content="Educational resource about biological viruses: types, history, and safety. Brought to you by Vertex Systems." />
+  <meta name="keywords" content="viruses, biology, virology, covid-19, ebola, hiv, influenza, zika, outbreaks" />
+  <meta property="og:title" content="Biological Viruses | Vertex Systems" />
+  <meta property="og:description" content="Learn about virus types, history, and safety. Clean, modern, and responsive site." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Vertex Systems home">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-name">Vertex Systems</span>
+      </a>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle navigation">Menu</button>
+      <nav class="nav" data-nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="types.html">Types of Virus</a>
+        <a href="timeline.html">Year Wise Listing</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle" data-dropdown-toggle aria-haspopup="true" aria-expanded="false">Individual Viruses ▾</a>
+          <div class="dropdown-menu" role="menu">
+            <a href="covid-19.html" role="menuitem">COVID-19</a>
+            <a href="ebola.html" role="menuitem">Ebola</a>
+            <a href="hiv.html" role="menuitem">HIV</a>
+            <a href="influenza.html" role="menuitem">Influenza</a>
+            <a href="zika.html" role="menuitem">Zika</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Introduction">
+    <div class="container hero-content">
+      <h1>Understanding Biological Viruses</h1>
+      <p>Viruses are microscopic infectious agents that can cause diseases in humans, animals, and plants. They replicate inside host cells and come in various types.</p>
+      <div class="actions">
+        <a class="btn" href="types.html">Explore Types</a>
+        <a class="btn secondary" href="#overview">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="overview" class="section">
+      <div class="container">
+        <h2>Overview of Virus Types</h2>
+        <div class="grid">
+          <article class="card" aria-label="DNA Viruses">
+            <img src="https://images.unsplash.com/photo-1582711012124-a52b4a67da52?q=80&w=1974&auto=format&fit=crop" alt="3D render of a DNA-like viral structure" />
+            <div class="card-body">
+              <h3>DNA Viruses</h3>
+              <p>Store genetic information as DNA. Examples include adenoviruses and herpesviruses. Often stable with lower mutation rates.</p>
+            </div>
+          </article>
+          <article class="card" aria-label="RNA Viruses">
+            <img src="https://images.unsplash.com/photo-1584036561584-b03c19da874c?q=80&w=1974&auto=format&fit=crop" alt="3D render of an RNA virus particle" />
+            <div class="card-body">
+              <h3>RNA Viruses</h3>
+              <p>Use RNA as genetic material. Examples include coronaviruses and influenza; typically mutate more quickly.</p>
+            </div>
+          </article>
+          <article class="card" aria-label="Enveloped Viruses">
+            <img src="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?q=80&w=1974&auto=format&fit=crop" alt="Microscopic visualization of an enveloped virus" />
+            <div class="card-body">
+              <h3>Enveloped vs. Non-enveloped</h3>
+              <p>Enveloped viruses have a lipid membrane aiding entry but sensitive to disinfectants; non-enveloped are generally more resilient.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Impact at a Glance</h2>
+        <p class="muted">Selected figures from major outbreaks. Sources: <a href="https://ourworldindata.org/covid-deaths" target="_blank" rel="noopener">Our World in Data</a>, <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a>.</p>
+        <div class="chart" aria-label="Deaths comparison chart">
+          <div class="bar-label"><span>1918 Influenza (est.)</span><span>~50M</span></div>
+          <div class="bar" data-bar="95"></div>
+          <div class="bar-label"><span>2014–16 Ebola (est.)</span><span>11k</span></div>
+          <div class="bar" data-bar="10"></div>
+          <div class="bar-label"><span>2020– COVID-19 (reported)</span><span>7M+</span></div>
+          <div class="bar" data-bar="60"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <strong>Vertex Systems</strong>
+        <p>Educational resource on virology and public health.</p>
+      </div>
+      <div class="footer-col">
+        <nav aria-label="Footer">
+          <a href="about.html">About Us</a><br />
+          <a href="types.html">Types of Virus</a><br />
+          <a href="timeline.html">Year Wise Listing</a><br />
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <form class="form" data-feedback-form aria-label="Feedback form">
+          <div>
+            <label for="f-name">Name</label>
+            <input class="input" id="f-name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div>
+            <label for="f-email">Email</label>
+            <input class="input" id="f-email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div>
+            <label for="f-message">Message</label>
+            <textarea class="textarea" id="f-message" name="message" placeholder="Your feedback" required></textarea>
+          </div>
+          <button class="btn" type="submit">Send Feedback</button>
+        </form>
+      </div>
+      <div class="footer-col" style="grid-column: span 12;">
+        <small>© <span id="year"></span> Vertex Systems. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="./script.js" defer></script>
+</body>
+</html>
