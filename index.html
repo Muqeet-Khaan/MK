@@ -40,7 +40,7 @@
   </header>
 
   <section class="hero" aria-label="Introduction">
-    <div class="container hero-content">
+    <div class="container hero-content" data-reveal>
       <h1>Understanding Biological Viruses</h1>
       <p>Viruses are microscopic infectious agents that can cause diseases in humans, animals, and plants. They replicate inside host cells and come in various types.</p>
       <div class="actions">
@@ -51,26 +51,26 @@
   </section>
 
   <main>
-    <section id="overview" class="section">
+    <section id="overview" class="section" data-reveal>
       <div class="container">
         <h2>Overview of Virus Types</h2>
         <div class="grid">
           <article class="card" aria-label="DNA Viruses">
-            <img src="https://images.unsplash.com/photo-1582711012124-a52b4a67da52?q=80&w=1974&auto=format&fit=crop" alt="3D render of a DNA-like viral structure" />
+            <img src="https://images.unsplash.com/photo-1582711012124-a52b4a67da52?auto=format&fit=crop&w=1600&q=60" alt="3D render of a DNA-like viral structure" loading="lazy" decoding="async" />
             <div class="card-body">
               <h3>DNA Viruses</h3>
               <p>Store genetic information as DNA. Examples include adenoviruses and herpesviruses. Often stable with lower mutation rates.</p>
             </div>
           </article>
           <article class="card" aria-label="RNA Viruses">
-            <img src="https://images.unsplash.com/photo-1584036561584-b03c19da874c?q=80&w=1974&auto=format&fit=crop" alt="3D render of an RNA virus particle" />
+            <img src="https://images.unsplash.com/photo-1584036561584-b03c19da874c?auto=format&fit=crop&w=1600&q=60" alt="3D render of an RNA virus particle" loading="lazy" decoding="async" />
             <div class="card-body">
               <h3>RNA Viruses</h3>
               <p>Use RNA as genetic material. Examples include coronaviruses and influenza; typically mutate more quickly.</p>
             </div>
           </article>
           <article class="card" aria-label="Enveloped Viruses">
-            <img src="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?q=80&w=1974&auto=format&fit=crop" alt="Microscopic visualization of an enveloped virus" />
+            <img src="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?auto=format&fit=crop&w=1600&q=60" alt="Microscopic visualization of an enveloped virus" loading="lazy" decoding="async" />
             <div class="card-body">
               <h3>Enveloped vs. Non-enveloped</h3>
               <p>Enveloped viruses have a lipid membrane aiding entry but sensitive to disinfectants; non-enveloped are generally more resilient.</p>
@@ -80,7 +80,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" data-reveal>
       <div class="container">
         <h2>Impact at a Glance</h2>
         <p class="muted">Selected figures from major outbreaks. Sources: <a href="https://ourworldindata.org/covid-deaths" target="_blank" rel="noopener">Our World in Data</a>, <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a>.</p>
@@ -135,5 +135,6 @@
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="./script.js" defer></script>
+  <script>if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.btn .ripple').forEach(e=>e.remove());}</script>
 </body>
 </html>
