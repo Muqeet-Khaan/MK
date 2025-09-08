@@ -16,9 +16,9 @@ html, body { height: 100%; }
 body {
   margin: 0;
   color: var(--text);
-  background: radial-gradient(1200px 600px at 10% -10%, rgba(0,123,255,.18), transparent 60%),
-              radial-gradient(900px 500px at 100% 10%, rgba(0,194,255,.16), transparent 60%),
-              linear-gradient(135deg, #001F3F 0%, #0b2a4d 100%);
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(34,211,238,.18), transparent 60%),
+              radial-gradient(900px 500px at 100% 10%, rgba(79,70,229,.16), transparent 60%),
+              linear-gradient(135deg, #0ea5e9 0%, #4f46e5 100%);
   font: 16px/1.6 "Roboto", Arial, Helvetica, sans-serif;
 }
 img { max-width: 100%; display: block; }
